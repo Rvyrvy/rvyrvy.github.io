@@ -1,22 +1,97 @@
 <!DOCTYPE html>
 <html>
-<style>
-    body {
-        text-align: center;
-        color: azure
-    }
+<head>
 
-    div {
-        margin: 0 auto;
-        width: 400px;
-        height: 100px;
-    }
-</style>
-<body background="milky-way-2695569.jpg">
-<div>
-    <h1 style="font-size:120px">RVY</h1>
-    <p style="font-size:100px">AI</p>
-    <p>Will come later.未来将至。</p>
+    <meta content="text/html;charset=utf-8">
+
+    <script language="JavaScript" rel="script" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        html {
+            height: 100%;
+
+        }
+
+        body {
+            height: 100%;
+            color: #747070;
+        }
+
+
+        .content {
+            height: 100%;
+margin: 20px auto;
+
+
+        }
+        img{}
+
+
+    </style>
+    <script>
+        $(function () {
+
+            var height = window.screen.height;
+            $(document.body).height(height);
+            $(".content").each(function (i) {
+
+                $(this).css({'background': 'url(photos/architecture-' + (i + 1) + '.jpg)','background-repeat':'no-repeat','background-size':'100% 100%'});
+            })
+
+        });
+    </script>
+    <script>
+        $(function () {
+            var scrolltop = 0;
+            $(window).scroll(function () {
+                var h2 = $(".content").eq(1).height();
+
+                var sto = $(window).scrollTop();
+                var sio = sto % h2;
+                var io = parseInt(sto / h2);
+                console.log("h2:" + h2 + "scrolltop:" + scrolltop + "sto:" + sto + "sio:" + sio + "io:" + io);
+
+
+                var dh =$(document).height();
+                var sd = dh-sto;
+                var sid = sd%h2;
+                var id =parseInt(sd/h2);
+
+                console.log("dh:" + dh + "sd:" + sd + "sid:" + sid + "id:" + id + "io:" + io);
+                if (sto > scrolltop) {
+                    if (sio > (0.3 * h2)) {
+                        $(window).scrollTop((io + 1) * (h2+20));
+                    }
+                }
+                scrolltop = sto;
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+
+<div class="content">
+
+
+</div>
+<div class="content" >
+
+</div>
+<div class="content" >
+
+</div>
+<div class="content">
+
+</div>
+<div class="content" >
+
+</div>
+<div class="content">
+
+</div>
+<div class="content">
+
 </div>
 </body>
 </html>
