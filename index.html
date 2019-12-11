@@ -42,7 +42,9 @@ margin: 20px auto;
     <script>
         $(function () {
             var scrolltop = 0;
+            var count =0;
             $(window).scroll(function () {
+                count ++;
                 var h2 = $(".content").eq(1).height();
 
                 var sto = $(window).scrollTop();
@@ -50,17 +52,13 @@ margin: 20px auto;
                 var io = parseInt(sto / h2);
                 console.log("h2:" + h2 + "scrolltop:" + scrolltop + "sto:" + sto + "sio:" + sio + "io:" + io);
 
-
-                var dh =$(document).height();
-                var sd = dh-sto;
-                var sid = sd%h2;
-                var id =parseInt(sd/h2);
-
-                console.log("dh:" + dh + "sd:" + sd + "sid:" + sid + "id:" + id + "io:" + io);
-                if (sto > scrolltop) {
-                    if (sio > (0.3 * h2)) {
-                        $(window).scrollTop((io + 1) * (h2+20));
-                    }
+                if(io>=0&&sio>=h2/2&&scrolltop<sto&&count>0){
+                    $(window).scrollTop((io+1)*(h2+20));
+                    count=0;
+                }
+                if(io>=0&&sio<=h2/2&&scrolltop>sto&&count>0){
+                    $(window).scrollTop((io)*(h2+20));
+                    count=0;
                 }
                 scrolltop = sto;
             })
