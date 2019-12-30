@@ -18,10 +18,11 @@
 
     $.ajax({
         type: "GET",
-        url: "http://cdn.weather.hao.360.cn/sed_api_weather_info.php?app=360chrome",
+        url: "http://cdn.weather.hao.360.cn/sed_api_weather_info.php",
         dataType : "jsonp",
         jsonp: "_jsonp",//参数名
         success: function(jsonData){
+            console.log(jsonData);
             var html;
             html = '数据更新时间：' + jsonData.pubdate + ' ' + jsonData.pubtime + '<br>';
 
