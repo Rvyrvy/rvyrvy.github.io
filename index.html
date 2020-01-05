@@ -35,8 +35,8 @@
    font-size: 19pt;
   }
   li {
-
-   text-align: left;
+  list-style: none;
+   text-align: center;
    line-height: 33px;
    font-weight: bolder;
    
@@ -60,9 +60,10 @@
  <script>
   $(function () {
    $("li>a").mouseover(function () {
-      $(this).css({"background-color":"#ffffff","color":"#000000"});
+      $(this).css({"background-color":"#ffffff","color":"#000000","height":"55px","line-height":"55px"});
+
    }).mouseout(function(){
-    $(this).css({"background-color":"#557755","color":"#ffffff"});
+    $(this).css({"background-color":"#557755","color":"#ffffff","height":"33px","line-height":"33px"});
    })
   })
  </script>
@@ -81,8 +82,6 @@
 
 
 
-
-   <h1 > 站点推荐 </h1>
 
    <ul > 
     <li ><a href="https://www.rvy.ai">主页</a></li>
@@ -121,14 +120,14 @@
     <li><a href="https://s3.amazonaws.com/lantern/lantern-installer.apk">蓝灯</a></li>
     <li><a href="https://play.google.com">谷歌菜市场</a> </li>
    </ul>
-   <h3>蒸汽平台</h3>
+   <h3>蒸汽</h3>
    <ul>
    <li ><a href="https://store.steampowered.com/app/550/Left_4_Dead_2/">求生之路2</a></li>
     <li><a href="https://store.steampowered.com/app/32470/STAR_WARS_Empire_at_War__Gold_Pack/">星球大战</a> </li>
     <li><a href="https://store.steampowered.com/app/570/Dota_2/"> Dota2</a></li>
     <li><a href="https://store.steampowered.com/app/227300/Euro_Truck_Simulator_2/">欧卡模拟2</a> </li>
    </ul>
-   <h3>Chrome 插件</h3>
+   <h3>Chrome</h3>
    <ul>
     <li><a href="https://chrome.google.com/webstore/detail/speed-dial-fvd-new-tab-pa/llaficoajjainaijghjlofdfmbjpebpa">Speed Dial [FVD]</a> </li>
     <li><a href="https://chrome.google.com/webstore/detail/eversync-sync-bookmarks-b/iohcojnlgnfbmjfjfkbhahhmppcggdog">EverSync </a> </li>
@@ -162,6 +161,14 @@
     <li><a href="https://consumer.huawei.com/cn/">华为</a></li>
 
 
+   </ul>
+   <h3>硬件</h3>
+   <ul>
+    <li><a href="https://www.intel.cn/content/www/cn/zh/products/processors.html">英特尔</a> </li>
+    <li><a href="https://www.amd.com/zh-hans">超微半导体</a> </li>
+    <li><a href="https://www.nvidia.cn/">英伟达</a> </li>
+    <li><a href="https://www.qualcomm.cn/">高通</a> </li>
+    <li><a href="http://www.hisilicon.com/">海思</a> </li>
    </ul>
    <h3>汽车</h3>
    <ul>
