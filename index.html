@@ -33,6 +33,8 @@
 
   li {
    font-size: 19pt;
+   width: 39%;
+   float: left;
   }
   li {
   list-style: none;
@@ -62,10 +64,11 @@
  <script>
   $(function () {
    $("li>a").mouseover(function () {
-      $(this).css({"background-color":"#ffffff","color":"#000000","height":"55px","line-height":"55px"});
+      $(this).css({"background-color":"#ffffff","color":"#000000","height":"111px","line-height":"111px","font-size":"33pt"});
+
 
    }).mouseout(function(){
-    $(this).css({"background-color":"#ffffff","color":"#000000","height":"33px","line-height":"33px"});
+    $(this).css({"background-color":"#ffffff","color":"#000000","height":"33px","line-height":"33px","font-size":"19pt"});
    })
   })
  </script>
